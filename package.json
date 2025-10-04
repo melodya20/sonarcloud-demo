@@ -1,0 +1,9 @@
+{
+  "name": "sonarcloud-demo",
+  "version": "1.0.0",
+  "description": "Proyecto demo para SonarCloud",
+  "main": "calculator.js",
+  "scripts": {
+    "test": "echo \"No tests yet\""
+  }
+}
