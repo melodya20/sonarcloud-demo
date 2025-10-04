@@ -1,20 +1,20 @@
-function ejecutarCodigo(input) {
-    return eval(input); // Uso crítico detectado
-}
-
-function obtenerUsuario(nombre) {
-    var query = "SELECT * FROM users WHERE name = '" + nombre + "'"; // SQL injection
-    return query;
-}
-
-function validarEstado(estado) {
-    if (estado = "activo") { // Asignación en lugar de comparación
-        return true;
+function sumar(a, b) {
+    if (typeof a !== 'number' || typeof b !== 'number') {
+        throw new Error('Los parámetros deben ser números');
     }
-    return false;
+    return a + b;
 }
 
-// Variable sin usar
-var token = "abc123";
+function dividir(a, b) {
+    if (b === 0) {
+        throw new Error('No se puede dividir entre cero');
+    }
+    return a / b;
+}
 
-module.exports = { sumar, dividir, calcularDescuento, ejecutarCodigo, obtenerUsuario, validarEstado };
+function calcularDescuento(precio, descuento) {
+    if (typeof precio !== 'number' || typeof descuento !== 'number') {
+        throw new Error('Datos inválidos');
+    }
+    return precio - (precio * descuento / 100);
+}
