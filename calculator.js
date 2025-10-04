@@ -8,7 +8,7 @@ function obtenerUsuario(nombre) {
     return query;
 }
 
-function validarEstado(estado) {
+function validarEstado(estado,estado2) {
     if (estado = "activo") { // Asignación en lugar de comparación
         return true;
     }
